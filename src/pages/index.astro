@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="lilSignature - Free Email Signature Generator | lilAgents"
+  description="Build a clean, Gmail-safe HTML email signature with your details, links, and logo, then copy it in one click. A free tool by lilAgents."
+>
+  <section class="pt-12 pb-16 lg:pt-16 bg-white dark:bg-dark">
+    <div class="container">
+      <div id="sig-tool" class="mx-auto max-w-5xl">
+
+        <header class="text-center mb-8">
+          <h1 class="text-3xl sm:text-4xl font-bold text-dark dark:text-white mb-2">
+            <span class="text-primary">lil</span>Signature
+          </h1>
+          <p class="text-body-color dark:text-dark-6">Free email signature generator with clean, Gmail-safe HTML</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+          <!-- Form -->
+          <div class="bg-white dark:bg-dark-2 rounded-2xl border border-gray-200 dark:border-dark-3 shadow-sm p-6">
+            <form id="sig-form" class="space-y-6">
+
+              <div class="space-y-4">
+                <h3 class="text-base font-semibold text-dark dark:text-white border-b border-gray-200 dark:border-dark-3 pb-2">Personal information</h3>
+                <div>
+                  <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                  <input id="fullName" type="text" required placeholder="John Doe" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="jobTitle" class="block text-sm font-medium text-gray-700 mb-1">Job Title</label>
+                  <input id="jobTitle" type="text" placeholder="Real Estate Agent" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="companyName" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                  <input id="companyName" type="text" placeholder="lilAgents" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-base font-semibold text-dark dark:text-white border-b border-gray-200 dark:border-dark-3 pb-2">Contact information</h3>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input id="email" type="email" placeholder="your.name@example.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="workPhone" class="block text-sm font-medium text-gray-700 mb-1">Work Phone</label>
+                    <input id="workPhone" type="tel" placeholder="(555) 123-4567" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+                  <div>
+                    <label for="directPhone" class="block text-sm font-medium text-gray-700 mb-1">Direct Phone</label>
+                    <input id="directPhone" type="tel" placeholder="(555) 987-6543" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  </div>
+                </div>
+                <div>
+                  <label for="website" class="block text-sm font-medium text-gray-700 mb-1">Website</label>
+                  <input id="website" type="url" placeholder="lilAgents.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                  <input id="address" type="text" placeholder="100 N Howard St Ste R, Spokane, WA 99201" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-base font-semibold text-dark dark:text-white border-b border-gray-200 dark:border-dark-3 pb-2">Social media</h3>
+                <div>
+                  <label for="youtube" class="block text-sm font-medium text-gray-700 mb-1">YouTube Link</label>
+                  <input id="youtube" type="url" placeholder="https://youtube.com/@lilAgents" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="linkedin" class="block text-sm font-medium text-gray-700 mb-1">LinkedIn Link</label>
+                  <input id="linkedin" type="url" placeholder="https://linkedin.com/company/lilAgents" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="twitter" class="block text-sm font-medium text-gray-700 mb-1">X Link</label>
+                  <input id="twitter" type="url" placeholder="https://x.com/lilAgents" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+
+                <div class="pt-3 border-t border-gray-200 dark:border-dark-3">
+                  <h4 class="text-sm font-medium text-gray-700 mb-3">Custom social links (image URL + profile URL)</h4>
+                  <div class="space-y-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <input id="cs1Img" type="url" placeholder="Image URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                      <input id="cs1Link" type="url" placeholder="Profile URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <input id="cs2Img" type="url" placeholder="Image URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                      <input id="cs2Link" type="url" placeholder="Profile URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <input id="cs3Img" type="url" placeholder="Image URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                      <input id="cs3Link" type="url" placeholder="Profile URL" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-base font-semibold text-dark dark:text-white border-b border-gray-200 dark:border-dark-3 pb-2">Images</h3>
+                <div>
+                  <label for="topLeftImage" class="block text-sm font-medium text-gray-700 mb-1">Top-left image (logo / profile picture)</label>
+                  <input id="topLeftImage" type="url" placeholder="https://lilagents.com/assets/tools/signature/logo.png" value="https://lilagents.com/assets/tools/signature/logo.png" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="topLeftImageUrl" class="block text-sm font-medium text-gray-700 mb-1">Top-left image click URL</label>
+                  <input id="topLeftImageUrl" type="url" placeholder="https://lilagents.com" value="https://lilagents.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="bottomImage" class="block text-sm font-medium text-gray-700 mb-1">Bottom banner image (optional)</label>
+                  <input id="bottomImage" type="url" placeholder="https://example.com/banner.png" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+                <div>
+                  <label for="bottomImageUrl" class="block text-sm font-medium text-gray-700 mb-1">Bottom image click URL (optional)</label>
+                  <input id="bottomImageUrl" type="url" placeholder="https://lilagents.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Preview / output -->
+          <div class="lg:sticky lg:top-28">
+            <div class="bg-white dark:bg-dark-2 rounded-2xl border border-gray-200 dark:border-dark-3 shadow-sm p-6">
+              <div class="flex items-start justify-between mb-4 gap-3">
+                <div>
+                  <h2 class="text-lg font-semibold text-dark dark:text-white">Preview</h2>
+                  <p class="text-sm text-body-color dark:text-dark-6">How your signature will look.</p>
+                </div>
+                <button type="button" id="dark-toggle" class="shrink-0 px-3 py-1.5 text-sm rounded-lg bg-gray-1 dark:bg-dark text-dark dark:text-white border border-gray-200 dark:border-dark-3 hover:bg-gray-200 dark:hover:bg-dark-3 transition-colors">Dark background</button>
+              </div>
+
+              <div class="flex border-b border-gray-200 dark:border-dark-3 mb-4">
+                <button type="button" id="tab-preview" class="sig-tab tab-on">Preview</button>
+                <button type="button" id="tab-html" class="sig-tab">HTML</button>
+              </div>
+
+              <div id="pane-preview">
+                <div id="sig-preview-box" class="border border-gray-300 dark:border-dark-3 rounded-lg p-4 overflow-auto" style="background-color:#ffffff;">
+                  <div id="sig-preview"></div>
+                </div>
+              </div>
+
+              <div id="pane-html" class="hidden">
+                <div class="flex justify-end mb-2 h-8">
+                  <button type="button" id="reset-html" class="hidden text-sm text-primary hover:underline">Reset to generated</button>
+                </div>
+                <textarea id="sig-html" spellcheck="false" class="w-full h-64 px-3 py-2 bg-gray-1 dark:bg-dark border border-gray-300 dark:border-dark-3 rounded-lg text-xs font-mono text-dark dark:text-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+
+              <div class="flex flex-wrap gap-3 mt-4">
+                <button type="button" id="copy-sig" class="px-5 py-2.5 bg-primary text-white rounded-lg font-medium hover:bg-blue-dark transition-colors duration-200">Copy signature</button>
+                <button type="button" id="copy-html" class="px-5 py-2.5 bg-gray-1 dark:bg-dark text-dark dark:text-white border border-gray-200 dark:border-dark-3 rounded-lg font-medium hover:bg-gray-200 dark:hover:bg-dark-3 transition-colors duration-200">Copy HTML</button>
+              </div>
+
+              <p class="mt-4 text-sm text-body-color dark:text-dark-6 border-l-4 border-warning bg-warning/10 p-3 rounded">
+                <strong class="text-dark dark:text-white">Gmail users:</strong> paste the signature into a blank email, then copy <em>that</em> and paste it into your email signature settings.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    #sig-tool .sig-tab { padding: 0.5rem 1rem; font-weight: 500; border-bottom: 2px solid transparent; color: #6b7280; margin-bottom: -1px; }
+    #sig-tool .sig-tab.tab-on { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+    .dark #sig-tool .sig-tab { color: #9ca3af; }
+    .dark #sig-tool .sig-tab.tab-on { color: var(--color-primary); }
+    #sig-tool .focus\:ring-blue-500:focus { --tw-ring-color: var(--color-primary); }
+    #sig-tool .focus\:border-blue-500:focus { border-color: var(--color-primary); }
+    .dark #sig-tool input,
+    .dark #sig-tool textarea { background-color: var(--color-dark); border-color: #374151; color: #fff; }
+    .dark #sig-tool .border-gray-300 { border-color: #374151; }
+    .dark #sig-tool .text-gray-700 { color: #d1d5db; }
+    /* On the dark-background preview, lighten the rendered signature text so it
+       reads the way email clients render it in dark mode. Preview aid only; the
+       copied HTML keeps its original black/grey colors. */
+    #sig-preview-box.sig-dark #sig-preview span,
+    #sig-preview-box.sig-dark #sig-preview a { color: #cbd5e1 !important; }
+    #sig-preview-box.sig-dark #sig-preview span[style*="font-weight:bold"] { color: #ffffff !important; }
+    .sig-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--color-dark); color: #fff; padding: 10px 18px; border-radius: 9999px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 70; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); }
+    .sig-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  </style>
+
+  <script src="/tools/signature/app.js" is:inline></script>
+</Layout>
